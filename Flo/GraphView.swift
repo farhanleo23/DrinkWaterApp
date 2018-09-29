@@ -1,10 +1,4 @@
-//
-//  GraphView.swift
-//  Flo
-//
-//  Created by Hussain, Farhan on 2018. 09. 28..
-//  Copyright © 2018. Razeware. All rights reserved.
-//
+
 
 import UIKit
 

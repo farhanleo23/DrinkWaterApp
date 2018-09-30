@@ -7,6 +7,12 @@ class ViewController: UIViewController {
     var isGraphViewShowing = false
     
     
+    //Label outlets
+    @IBOutlet weak var averageWaterDrunk: UILabel!
+    @IBOutlet weak var maxLabel: UILabel!
+    @IBOutlet weak var stackView: UIStackView!
+    
+    
   //Counter outlets
   @IBOutlet weak var counterView: CounterView!
   @IBOutlet weak var counterLabel: UILabel!

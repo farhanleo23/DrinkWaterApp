@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     if isGraphViewShowing {
         counterViewTap(nil)
     }
+    
   }
   
   override func viewDidLoad() {
@@ -51,6 +52,8 @@ class ViewController: UIViewController {
                               completion: nil)
         }
         isGraphViewShowing = !isGraphViewShowing
+        
+    
     }
     
 }

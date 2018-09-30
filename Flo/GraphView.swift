@@ -61,6 +61,7 @@ import UIKit
             //Calculate the gap between points
             let spacing = graphWidth / CGFloat(self.graphPoints.count - 1)
             return CGFloat(column) * spacing + margin + 2
+        }
             
             // calculate the y point
             
@@ -71,27 +72,30 @@ import UIKit
             let columnYPoint = { (graphPoint: Int) -> CGFloat in
                 let y = CGFloat(graphPoint) / CGFloat(maxValue) * graphHeight
                 return graphHeight + topBorder - y // Flip the graph
+        }
                 
-                // draw the line graph
+        // draw the line graph
+        
+        UIColor.white.setFill()
+        UIColor.white.setStroke()
+        
+        // set up the points line
+        let graphPath = UIBezierPath()
+        
+        // go to start of line
+        graphPath.move(to: CGPoint(x: columnXPoint(0), y: columnYPoint(graphPoints[0])))
+        
+        // add points for each item in the graphPoints array
+        // at the correct (x, y) for the point
+        for i in 1..<graphPoints.count {
+            let nextPoint = CGPoint(x: columnXPoint(i), y: columnYPoint(graphPoints[i]))
+            graphPath.addLine(to: nextPoint)
+        }
+        
+        graphPath.stroke()
                 
-                UIColor.white.setFill()
-                UIColor.white.setStroke()
-                
-                // set up the points line
-                let graphPath = UIBezierPath()
-                
-                // go to start of line
-            //    graphPath.move(to: CGPoint(x: columnXPoint(0), y: columnYPoint(graphPoints[0])))
-                
-                // add points for each item in the graphPoints array
-                // at the correct (x, y) for the point
-             //   for i in 1..<self.graphPoints.count {
-               //     let nextPoint = CGPoint(x: columnXPoint(i), y: columnYPoint(graphPoints[i]))
-              //      graphPath.addLine(to: nextPoint)
-                }
-                
-           // graphPath.stroke()
+        
             }
         }
-    }
+
 

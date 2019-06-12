@@ -1,1 +1,1 @@
-# App That let's reminds people to drink water
+# Drink Water Regularly
